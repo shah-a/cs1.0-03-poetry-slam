@@ -13,13 +13,17 @@ def lines_printed_backwards(lines_list):
     for _ in range(len(lines_list)):
         lines_list[_] = f"{_ + 1} {lines_list[_]}"
 
-    # for _ in range(len(lines_list)):
-    #     print(lines_list[::-1][_])
-
-    #lines_list.reverse()
+    lines_list.reverse()
 
     for _ in lines_list:
         print(_)
+
+    #  for _ in range(len(lines_list)):
+    #     print(lines_list[::-1][_])
+    # #Alternate solution to print the list in reverse order
+    # #Previous solution uses list reverse() method, which reassigns to the variable
+    # #This solution uses slicing with a negative step; it does not reassign any values to the list
+    # #Though this one is super neat :), I chose the previous solution in favour of code readability
 
     return None
 
