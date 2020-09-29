@@ -4,5 +4,5 @@
 
 This is a ...
 
-## Language Used
+## Language
 Python 3.7.9

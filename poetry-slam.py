@@ -1,5 +1,8 @@
-#Ali Shah, github.com/shah-a
-#September 29th, 2020
+# Bismillah al-Rahmaan al-Raheem
+# Ali Shah | Sept. 29, 2020
+# CS1.0 Assignment 3: Poetry Slam
+
+# This program ... 
 
 from random import randint
 
