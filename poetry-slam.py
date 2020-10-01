@@ -2,7 +2,7 @@
 # Ali Shah | Sept. 29, 2020
 # CS1.0 Assignment 3: Poetry Slam
 
-# This program ... 
+""" This program ... """
 
 from random import randint
 
