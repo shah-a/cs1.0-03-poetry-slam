@@ -76,7 +76,11 @@ def equivalence_cycles(lines_list):  # lines_printed_custom() section of assignm
 
 poem_lines = get_file_lines("tanka.txt")
 
-#lines_printed_backwards(poem_lines)
-#lines_printed_random(poem_lines)
-#equivalence_cycles(poem_lines)
+lines_printed_backwards(poem_lines)
+print()  # Spacer
+lines_printed_random(poem_lines)
+print()  # Spacer
+equivalence_cycles(poem_lines)
+print()  # Spacer
+
 #equivalence_cycles(["one", "two", "three", "four", "five", "six"])
