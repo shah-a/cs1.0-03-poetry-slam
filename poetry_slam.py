@@ -11,7 +11,7 @@ def get_file_lines(filename):
     """Reads poem file, removes newline char, and returns lines in a list"""
 
     with open(filename, "r") as lines:
-        lines = lines.readlines()  # Saves list of each poem lines in file_lines
+        lines = lines.readlines()  # Saves list of each poem line in lines
 
     for _ in range(len(lines)):
         lines[_] = lines[_].rstrip()  # Removes newline char from right-side end of each poem line
@@ -22,18 +22,17 @@ def lines_printed_backwards(lines_list):
     """Adds numbers to poem's lines and reverses line order; prints result"""
 
     numbered_poem = []
-    for _ in range(len(lines_list)):
-        numbered_poem.append(f"{_ + 1} {lines_list[_]}")  # Adds line number to each string
+    for _, line in enumerate(lines_list):
+        numbered_poem.append(f"{_ + 1} {line}")  # Adds line number to each string
 
     numbered_poem.reverse()  # Reassigns all numbered_poem elements in reverse order
 
     for _ in numbered_poem:
         print(_)
 
-    '''Alternate solution without reassignment to numbered_poem:
-    for _ in range(len(numbered_poem)):
-        print(numbered_poem[::-1][_])  # [::-1] -> negative step, start at last index
-    '''
+    # Alternate solution without reassignment to numbered_poem:
+    # for _ in range(len(numbered_poem)):
+    #     print(numbered_poem[::-1][_])  # [::-1] -> negative step, start at last index
 
 def lines_printed_random(lines_list):
     """Prints random lines from poem until reaching original line count number of prints"""
