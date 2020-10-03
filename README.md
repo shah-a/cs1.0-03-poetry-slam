@@ -4,28 +4,29 @@ Written in: Python 3.7.9
 
 ## Description
 
-This program reads poem lines (or any text, for that matter) from a file and prints them in various manipulated ways.
+This program reads the lines of a poem (or any lines of text, for that matter) from a text file, manipulates the input in various ways, then prints the results.
 
 ## What does each function do?
 
-**get_file_lines(filename):**
-This function reads the poem from a text file.
-Text file needs to be in the same directory as `poetry_slam.py`.
-removes newline char, and returns lines in a list
+### [`get_file_lines(filename)`](https://github.com/shah-a/cs1.0-03-poetry-slam/blob/1179d3cca7e950be010419939cda5ca4cdafea56/poetry_slam.py#L10)
 
-**lines_printed_backwards(lines_list):**
-Adds numbers to poem's lines and reverses line order; prints result
+This function reads the poem from a text file named `tanka.txt`. The file needs to be in the same directory as `poetry_slam.py`. Newline chars (`\n`) are stripped from the right ends of each line, then the poem lines are returned as a list of strings.
 
-**lines_printed_random(lines_list):**
+### [`lines_printed_backwards(lines_list)`](https://github.com/shah-a/cs1.0-03-poetry-slam/blob/1179d3cca7e950be010419939cda5ca4cdafea56/poetry_slam.py#L21)
 
-Prints random lines from poem until reaching original line count number of prints
+This function adds line numbers to the left ends of each lines, then reverses the line order and prints the result.
 
-**equivalence_cycles(lines_list):**
+### [`lines_printed_random(lines_list)`](https://github.com/shah-a/cs1.0-03-poetry-slam/blob/1179d3cca7e950be010419939cda5ca4cdafea56/poetry_slam.py#L37)
 
-Fills list with random lines from poem, loops until the same line occupies
-every index in the list, and then prints result backwards. If loop cycles max_cycle
-times, loop stops and prints final generation of lines backwards. To maximize
-likelihood for most number of cycles, each line in poem should be unique
+This function prints random lines from the poem until the number of lines printed is equal to the total line count of the poem. Lines may be printed repeatedly.
+
+### [`equivalence_cycles(lines_list)`](https://github.com/shah-a/cs1.0-03-poetry-slam/blob/1179d3cca7e950be010419939cda5ca4cdafea56/poetry_slam.py#L46)
+
+This function repeatedly fills a list with random lines from the poem until every line in the list is equivalent (i.e. the same poem line occupies every list index). Then, it prints the resultant strings backwards. For this to happen, the same random number needs to be generated len(list) times.
+
+To maximize the likelihood for most number of cycles, each line in poem should be unique. If a poem has lines that repeat, the likelihood of generating equivalent strings greatly increases because the indices of *any* repeating lines can be generated instead of just *one* number needing to be repeatedly generated.
+
+If the loops cycles [`max_cycles`](https://github.com/shah-a/cs1.0-03-poetry-slam/blob/4984b4f1955a90fe4a2fc630234c23914cf7c21f/poetry_slam.py#L55) times, the loop breaks and the final generation attempt of strings is printed. Otherwise, the function counts and prints how many cycles it took to successfully fill the list with equivalent strings.
 
 ## The poem I used...
 
