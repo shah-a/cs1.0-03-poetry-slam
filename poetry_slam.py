@@ -44,15 +44,14 @@ def lines_printed_random(lines_list):
         )
 
 def equivalence_cycles(lines_list):  # lines_printed_custom() section of assignment
-    """
-    Randomizes poem's lines until every line is equivalent, then prints each line backwards
-    Stops at max_cycles attempts and prints the last attempt
-    To maximize likelihood for most number of cycles, each line in poem should be unique
-    """
+    """Fills list with random lines from poem, loops until the same line occupies
+    every index in the list, and then prints result backwards. If loop cycles max_cycle
+    times, loop stops and prints final generation of lines backwards. To maximize
+    likelihood for most number of cycles, each line in poem should be unique"""
 
     new_list = []
     counter = 0
-    max_cycles = 99999  # Used to limit attempts; recommended for lists with len >5
+    max_cycles = 99999  # Used to limit attempts; recommended if len(list) > 5
 
     while True:
         new_list.clear()
@@ -81,5 +80,3 @@ lines_printed_random(poem_lines)
 print()  # Spacer
 equivalence_cycles(poem_lines)
 print()  # Spacer
-
-#equivalence_cycles(["one", "two", "three", "four", "five", "six"])
