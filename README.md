@@ -29,7 +29,9 @@ likelihood for most number of cycles, each line in poem should be unique
 
 ## The poem I used...
 
-...is a (translated) mixup of two old Japanese poems. The first one is a question, and the second is its response. From what I understand, these poems are in the form of "tanka" poetry, which is similar to haiku poetry in that its written to fit a number of syllables (in this case, 31 syllables each).
+...is a (translated) concatenation of two old Japanese romantic poems. The first one is a question, and the second is its response.
+
+From what I understand, these poems are in the form of "tanka" poetry, which is similar to "haiku" poetry in that its written to satisfy a set number of syllables (in this case, 31 syllables each).
 
 **The translation I used:**
 
@@ -63,3 +65,6 @@ likelihood for most number of cycles, each line in poem should be unique
 > *Warewa tomaramu,*<br>
 > いもしとどめば<br>
 > *Imoshi todomeba.*
+<br>
+
+<img alt="Garden of Words/Kotonoha no Niwa" src="/img/garden.gif" width="200" />
