@@ -51,13 +51,16 @@ def equivalence_cycles(lines_list):  # lines_printed_custom() section of assignm
 
     new_list = []
     counter = 0
+    i = len(lines_list) - 1
     max_cycles = 99999  # Used to limit attempts; recommended if len(list) > 5
 
     while True:
         new_list.clear()
         counter += 1
         for _ in range(len(lines_list)):
-            new_list.append(lines_list[randint(0, len(lines_list) - 1)])
+            new_list.append(
+                lines_list[randint(0, i)]
+            )
 
         #print(new_list)  # Uncomment to print each list variation per cycle
         #input()          # Uncomment for keyboard prompt to step cycle-by-cycle
